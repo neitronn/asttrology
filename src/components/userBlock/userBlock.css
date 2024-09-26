@@ -1,0 +1,24 @@
+.user-block{
+    padding: 0 30px;
+}
+
+.user-icons{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    background: var(--bg-color-block);
+    border-radius: 50px;
+    margin-right: 5px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.user-icons i{
+    font-size: 23px;
+}
+
+.user-block_item{
+    display: flex;
+    cursor: pointer;
+}

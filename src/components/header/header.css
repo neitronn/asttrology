@@ -1,0 +1,26 @@
+.header{
+    height: 60px;
+    background: #110125;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right_panel{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right_panel > div{
+    border-left: 1px solid #ffffff4d;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right_panel .search{
+    padding: 0 20px;
+}

@@ -1,0 +1,26 @@
+.info_site{
+    height: 100%;
+    display: flex;
+    font-size: 14px;
+}
+
+.address, .phone{
+    width: 220px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.address{
+    border-right: 1px solid #ffffff4d;
+}
+
+.info_site_item{
+    display: flex;
+    align-items: center;
+}
+
+.info_site_item i{
+    margin-right: 15px;
+    font-size: 22px;
+}
