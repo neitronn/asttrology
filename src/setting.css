@@ -1,8 +1,11 @@
 :root {
     --main-bg-color: #170135;
     --main-color: #542875;
+    --additional-color: #75429c;
     --main-color-text: #fff;
     --bg-color-block:rgba(255, 255, 255, 0.21);
+    --active-color: #ee8722;
+    --additional-bg-color: #110125;
   }
 
 body{
@@ -12,6 +15,7 @@ body{
     font-weight: 400;
     color: var(--main-color-text);
     background-color: var(--main-bg-color);
+    overflow: hidden;
 }
 
 .additional-font{

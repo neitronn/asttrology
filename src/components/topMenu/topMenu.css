@@ -1,0 +1,106 @@
+.top-menu a, .top-menu p{
+    color: var(--main-color-text);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.top-menu ul{
+    overflow: hidden;
+    position: absolute;
+}
+
+.top-menu.nesting_1{
+    height: 100%;
+    display: flex;
+    column-gap: 30px;
+}
+
+.top-menu.nesting_1 > li, .top-menu.nesting_1 > li > a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.top-menu.nesting_1 > li > a::before, .top-menu.nesting_1 > li > a::after{
+    content: ' ';
+    width: 0;
+    height: 4px;
+    position: absolute;
+    background-color: var(--main-color-text);
+    transition: all 0.5s;
+    bottom: 20px;
+}
+
+.top-menu.nesting_1 > li > a:before{
+    right: 20%;
+}
+
+.top-menu.nesting_1 > li > a:after{
+    left: 65%;
+}
+
+.top-menu.nesting_1 > li > a:hover:before{
+    width: 20%;
+    right: 0;
+}
+
+.top-menu.nesting_1 > li > a:hover:after{
+    width: 65%;
+    left: 0;
+}
+
+.top-menu li:hover > ul, .top-menu ul:not(.nesting_1):hover{
+    max-height: 1500px;
+    transition: all 1.5s;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes slidein {
+    from {
+        overflow: hidden;
+    }
+  
+    to {
+        overflow: visible;
+    }
+  }
+
+.top-menu ul:not(.nesting_1){
+    position: absolute;
+    background-color: var(--main-bg-color);
+    max-height: 0;
+    transition: all 0.2s;
+    top: 0;
+}
+
+.top-menu .main_menu_item ~ ul{
+    top: 100%;
+}
+
+.top-menu ul:not(.nesting_1) li:hover{
+    background-color: var(--additional-color);  
+}
+
+.top-menu ul:not(.nesting_1) li a{
+    width: 160px;
+    height: 47px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.top-menu ul:not(.nesting_1) li{
+    position: relative;
+}
+
+.right_menu_show{
+    left: 100%;
+}
+
+.left_menu_show{
+    right: 100%;
+}

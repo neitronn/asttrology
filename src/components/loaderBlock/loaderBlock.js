@@ -1,7 +1,7 @@
 import './loaderBlock.css';
- const LoaderBlock = () => {
+ const LoaderBlock = (props) => {
     return (
-        <div className="placeholder-item"> </div>
+        <div className="placeholder-item"> {props['text']}</div>
     )
  }
 

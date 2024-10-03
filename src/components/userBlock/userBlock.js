@@ -6,7 +6,7 @@ export default class UserBlock extends Component{
         return (
             <div className="user-block">
                 <div className="user-block_item">
-                    <span className="user-icons"><i class="icon-user"></i></span>
+                    <span className="user-icons"><i className="icon-user"></i></span>
                     <span className="user-block_text">Вход/Регистрация</span>
                 </div>
             </div>

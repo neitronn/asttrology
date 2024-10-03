@@ -1,0 +1,36 @@
+.top-panel{
+    height: 100px;
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-columns: 155px 1fr 130px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    column-gap: 30px;
+}
+
+.contact-block{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.top-panel .placeholder-item{
+    max-height: 47px;
+}
+
+.top-menu-wrap{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.top-menu-wrap .placeholder-item{
+    width: 200px;
+    height: 35px;
+}
+
+.top-menu-wrap .error-block img{
+    max-height: 100px;
+}

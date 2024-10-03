@@ -3,8 +3,8 @@
   border-radius: 4px;
   position: relative;
   overflow: hidden;
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
   }
 
   .placeholder-item::before {
