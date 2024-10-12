@@ -15,7 +15,6 @@ body{
     font-weight: 400;
     color: var(--main-color-text);
     background-color: var(--main-bg-color);
-    overflow: hidden;
 }
 
 .additional-font{

@@ -1,6 +1,7 @@
 import './contacts.css';
 import LoaderBlock from '../loaderBlock';
 import ErrorBlock from '../errorBlock';
+import Button from '../button';
 
 const Contacts = (props) => {
     if (props['contact'] === null){
@@ -12,9 +13,7 @@ const Contacts = (props) => {
     }
 
     return (
-        <a href={props['contact']['link']} className='contacts'>
-            {props['contact']['name']}
-        </a>
+        <Button link={props['contact']['link']} name={props['contact']['name']} class_name='contacts' />
     )
 }
 export default Contacts;

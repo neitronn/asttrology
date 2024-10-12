@@ -1,0 +1,48 @@
+.custom_ul li{
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    column-gap: 25px;
+    align-items: center;
+}
+
+.custom_ul li .sheet-box_ico{
+    width: 80px;
+    height: 80px;
+    border: 8px solid var(--bg-color-block);
+    border-radius: 50%;
+    font-size: 40px;
+}
+
+.custom_ul li .sheet-box_ico .sheet-box_ico_wrap{
+    background-color: var(--main-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+}
+
+.custom_ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.custom_ul .sheet-box_text{
+    border-radius: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color-text);
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--bg-color-block);
+    transition: all 0.5s;
+}
+
+.custom_ul li:hover .sheet-box_ico .sheet-box_ico_wrap, .custom_ul li:hover .sheet-box_text{
+    background-color: var(--active-color);
+}
