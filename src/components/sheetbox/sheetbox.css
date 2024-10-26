@@ -1,8 +1,12 @@
 .custom_ul li{
     display: grid;
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 80px 1fr ;
     column-gap: 25px;
     align-items: center;
+}
+
+.custom_ul li > *:first-child{
+    order: 2;
 }
 
 .custom_ul li .sheet-box_ico{

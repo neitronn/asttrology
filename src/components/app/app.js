@@ -5,6 +5,8 @@ import AjaxResourc from '../../services/ajax';
 import FatalError from "../fatalError/";
 import TopPanel from "../topPanel/";
 import TopSlider from "../topSlider";
+import Zodiac from "../../sections/zodiac";
+import Registration from "../../forms/registration";
 
 export default class App extends Component{
     state = {
@@ -43,13 +45,13 @@ export default class App extends Component{
                          {
                             id : 3,
                             ico : <i className="icon-heart"></i>,
-                          
+                            link : '#',
                             text : 'пункт 3'
                          },
                          {
                             id : 4,
                             ico : <i className="icon-dice"></i>,
-                          
+                            link : '#',
                             text : 'пункт 4'
                          },
                     ]
@@ -58,20 +60,92 @@ export default class App extends Component{
             {
                 id : 2,
                 type : 'default',
-                h1 : 'Дабро пожаловать',
-                h2 : 'the Jyotish Astrology',
-                p : 'Здесь какой то текст с описанием к этому слайду желательно в пару строк для лучшего отоброжения',
-                
+                h1 : 'Дабро пожаловать 2',
+                h2 : 'the Jyotish Astrology 2',
+                p : 'Здесь какой то текст с описанием к этому слайду желательно в пару строк для лучшего отоброжения 2',
+                btn : {
+                    class_name : '',
+                    name : 'Подробнее',
+                    link : '#'
+                },
+                ul : {
+                    class_name : '',
+                    data_ul : [
+                        {
+                           id : 5,
+                           ico : <i className="icon-home3"></i>,
+                           link : '#',
+                           text : 'пункт 5'
+                        },
+                        {
+                            id : 6,
+                            ico : <i className="icon-user"></i>,
+                            link : '#',
+                            text : 'пункт 6'
+                         },
+                         {
+                            id : 7,
+                            ico : <i className="icon-heart"></i>,
+                            link : '#',
+                            text : 'пункт 7'
+                         },
+                         {
+                            id : 8,
+                            ico : <i className="icon-dice"></i>,
+                            link : '#',
+                            text : 'пункт 8'
+                         },
+                    ]
+                }
             },
             {
                 id : 3,
                 type : 'default',
-                h1 : 'Дабро пожаловать',
-                h2 : 'the Jyotish Astrology',
-                p : 'Здесь какой то текст с описанием к этому слайду желательно в пару строк для лучшего отоброжения',
-               
+                h1 : 'Дабро пожаловать 3',
+                h2 : 'the Jyotish Astrology 3',
+                p : 'Здесь какой то текст с описанием к этому слайду желательно в пару строк для лучшего отоброжения 3',
+                btn : {
+                    class_name : '',
+                    name : 'Подробнее',
+                    link : '#'
+                },
+                ul : {
+                    class_name : '',
+                    data_ul : [
+                        {
+                           id : 9,
+                           ico : <i className="icon-home3"></i>,
+                           link : '#',
+                           text : 'пункт 9'
+                        },
+                        {
+                            id : 10,
+                            ico : <i className="icon-user"></i>,
+                            link : '#',
+                            text : 'пункт 10'
+                         },
+                         {
+                            id : 11,
+                            ico : <i className="icon-heart"></i>,
+                            link : '#',
+                            text : 'пункт 11'
+                         },
+                         {
+                            id : 12,
+                            ico : <i className="icon-dice"></i>,
+                            link : '#',
+                            text : 'пункт 12'
+                         },
+                    ]
+                }
             },
-        ]
+        ],
+        sections : {
+            zodiac : {
+                title : 'Choose Your Zodiac Sign', 
+                description : "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat hello Aenean world."
+            }
+        }
     }
 
     componentDidMount(){
@@ -99,7 +173,14 @@ export default class App extends Component{
     }
 
    NoRedrawing = memo(() => {     
-        return <TopSlider data={this.state['top_slider']} />;
+        const {top_slider, sections} = this.state;
+        return (
+            <>
+                <TopSlider data={top_slider} />
+                <Zodiac {...sections['zodiac']} />
+                <Registration />
+            </>
+        );
       });
 
     render (){

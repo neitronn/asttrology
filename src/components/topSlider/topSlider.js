@@ -10,7 +10,6 @@ import Sheetbox from "../sheetbox/sheetbox";
 import 'swiper/css';
 
 export default class TopSlider extends Component{
-
     slide = ({type, h1, h2, p, ul, btn}) => {
 
         let class_name = `slide-wrap slide-${type}`;
@@ -26,7 +25,16 @@ export default class TopSlider extends Component{
                 const ul_html =  ul ? <Sheetbox {...ul} /> : '';
                 ContentSlide = () => {
                     return (
-                        <div className="information-slide">
+                        <div className="information-slide"
+
+                        onMouseEnter={(e) => {
+                          e.target.closest('.swiper').swiper.autoplay.stop();
+                        }}
+
+                        onMouseLeave={(e) => {
+                            e.target.closest('.swiper').swiper.autoplay.start();
+                          }}
+                        >
                             <div className="information-slide_text">
                                 {h1_html}
                                 {h2_html}
@@ -63,7 +71,7 @@ export default class TopSlider extends Component{
                     speed={1200}
                     loop={true}
                     autoplay={{
-                        delay: 5000
+                        delay: 7000
                       }}
                     navigation
                 >

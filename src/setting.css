@@ -3,6 +3,7 @@
     --main-color: #542875;
     --additional-color: #75429c;
     --main-color-text: #fff;
+    --additional-color-text: rgba(255, 255, 255, 0.75);
     --bg-color-block:rgba(255, 255, 255, 0.21);
     --active-color: #ee8722;
     --additional-bg-color: #110125;
@@ -19,4 +20,20 @@ body{
 
 .additional-font{
     font-family: 'Bad Script', cursive;
+}
+
+.content{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: "Zadiac"; 
+    src: url("./fonts/AlmanacMt.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+.zodiac_font{
+    font-family: "Zadiac";
 }

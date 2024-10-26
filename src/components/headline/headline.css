@@ -1,0 +1,45 @@
+.headline{
+    max-width: 600px;
+    margin: 100px auto 60px auto;
+    text-align: center;
+}
+
+.headline h2{
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 1.1;
+}
+
+.headline span{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--additional-color);
+    display: inline-block;
+    position: relative;
+    margin-top: 10px;
+}
+
+.headline span::after{
+    content: '';
+    border: 1px solid var(--bg-color-block);
+    width: 20px;
+    position: absolute;
+    left: 8px;
+    top: 3px;
+}
+
+.headline span::before{
+    content: '';
+    border: 1px solid var(--bg-color-block);
+    width: 20px;
+    position: absolute;
+    right: 8px;
+    top: 3px;
+}
+
+.headline p{
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 23px;
+}

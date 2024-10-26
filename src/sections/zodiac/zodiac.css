@@ -1,0 +1,338 @@
+.zodiac_content{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding-bottom: 40px;
+}
+
+.zodiac_content .custom_ul li .sheet-box_ico{
+    border: none;
+    font-size: 46px;
+    width: 65px;
+    height: 65px;
+}
+
+.zodiac_content .custom_ul li{
+    grid-template-columns: 65px 1fr;
+    column-gap: 20px;
+    position: relative;
+}
+
+.zodiac_content .custom_ul .sheet-box_text{
+    display: block;
+    background-color: inherit;
+}
+
+.zodiac_content .custom_ul{
+    row-gap: 41px;
+}
+
+.zodiac_content .custom_ul li a{
+    color: var(--main-color-text);
+    font-size: 20px;
+    line-height: 25px;
+    order: 2;
+    transition: all 0.5s;
+    width: max-content;
+}
+
+.zodiac_content .custom_ul li p{
+    color: var(--additional-color-text);
+    order: 3;
+}
+
+.zodiac_content .custom_ul li .sheet-box_ico{
+    grid-row: span 2;
+    order: 1;
+}
+
+.zodiac_content .custom_ul li:hover .sheet-box_text{
+    background-color: inherit;
+}
+
+.zodiac_content .custom_ul li:hover .sheet-box_ico .sheet-box_ico_wrap{
+    background-color: var(--main-color);
+}
+
+.zodiac_content .custom_ul li a:hover ~ .sheet-box_ico .sheet-box_ico_wrap{
+    background-color: var(--active-color);
+}
+
+.zodiac_content .custom_ul li a:hover, .zodiac_content .custom_ul li a:hover ~ span::before, .zodiac_content .custom_ul li a:hover ~ span::after{
+    color: var(--active-color);
+    border-color: var(--active-color);
+}
+
+.zodiac_content .custom_ul li a:hover ~ span{
+    background-color: var(--active-color);
+}
+
+.zodiac_content .custom_ul li > span::after, .zodiac_content .custom_ul li > span::before{
+    border: 1px dashed #565656;
+    position: absolute;
+    transition: all 0.5s;
+}
+.zodiac_content .custom_ul li > span::after{
+    content: '';
+}
+
+.zodiac_left li:nth-child(1) > span::after{
+    width: 45px;
+    transform: rotate(231deg);
+    top: 107px;
+    left: 216px;
+}
+
+.zodiac_left li:nth-child(1) > span::before{
+    content: '';
+    width: 228px;
+    left: 2px;
+    transform: rotate(201deg);
+    top: 47px;
+}
+
+.zodiac_left li:nth-child(2) > span::after{
+    width: 176px;
+    left: 8px;
+    transform: rotate(197deg);
+    top: 32px;
+}
+
+.zodiac_left li:nth-child(3) > span::after{
+    width: 136px;
+    left: 8px;
+    transform: rotate(186deg);
+    top: 11px;
+}
+
+.zodiac_left li:nth-child(4) > span::after{
+    width: 125px;
+    left: 11px;
+    transform: rotate(173deg);
+    top: -4px;
+}
+
+.zodiac_left li:nth-child(5) > span::after{
+    width: 169px;
+    left: 7px;
+    transform: rotate(162deg);
+    top: -24px;
+}
+
+.zodiac_left li:nth-child(6) > span::after{
+    width: 225px;
+    left: -2px;
+    transform: rotate(156deg);
+    top: -43px;
+}
+
+.zodiac_left li:nth-child(6) > span::before{
+    content: '';
+    width: 35px;
+    transform: rotate(132deg);
+    top: -103px;
+    left: 209px;
+}
+
+.zodiac_right li:nth-child(1) > span::before{
+    content: '';
+    width: 35px;
+    transform: rotate(110deg);
+    top: 107px;
+    left: -245px;
+}
+
+.zodiac_right li:nth-child(1) > span::after{
+    width: 235px;
+    left: -227px;
+    transform: rotate(159deg);
+    top: 47px;
+}
+
+.zodiac_right li:nth-child(2) > span::after{
+    width: 175px;
+    left: -168px;
+    transform: rotate(162deg);
+    top: 31px;
+}
+
+.zodiac_right li:nth-child(3) > span::after{
+    width: 129px;
+    left: -127px;
+    transform: rotate(176deg);
+    top: 9px;
+}
+
+.zodiac_right li:nth-child(4) > span::after{
+    width: 125px;
+    left: -125px;
+    transform: rotate(190deg);
+    top: -7px;
+}
+
+.zodiac_right li:nth-child(5) > span::after{
+    width: 168px;
+    left: -163px;
+    transform: rotate(200deg);
+    top: -26px;
+}
+
+.zodiac_right li:nth-child(6) > span::before{
+    content: '';
+    width: 43px;
+    transform: rotate(44deg);
+    top: -105px;
+    left: -225px;
+}
+
+.zodiac_right li:nth-child(6) > span::after{
+    width: 216px;
+    left: -201px;
+    transform: rotate(206deg);
+    top: -44px;
+}
+
+.zodiac_content .custom_ul li > span{
+    position: absolute;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #565656;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.zodiac_content .custom_ul.zodiac_right li > span{
+    left: -30px;
+}
+
+.zodiac_content .zodiac_right.custom_ul li{
+    grid-template-columns: 1fr 65px;
+}
+
+
+.zodiac_content .zodiac_right.custom_ul li a{
+    order: 1;
+}
+
+.zodiac_content .zodiac_right.custom_ul li p{
+    color: var(--additional-color-text);
+    order: 3;
+}
+
+.zodiac_content .zodiac_right.custom_ul li .sheet-box_ico{
+    grid-row: span 2;
+    order: 2;
+}
+
+.zodiac_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.zodiac_center img{
+    border-radius: 100%;
+}
+
+.zodiac_center_img{
+    position: relative;
+    border-radius: 50%;
+}
+
+.zodiac_center_img_ob{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: none;
+}
+
+
+
+.zodiac_center_background, .zodiac_img{
+    position: absolute;
+}
+
+.zodiac_center_background{
+    width: 100%;
+    height: 100%;
+}
+.zodiac_img{
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: none;
+    z-index: 5;
+}
+
+
+
+.zodiac_container {
+    position: relative;
+    width: 296px;
+    height: 296px;
+}
+
+.zodiac_segment {
+    fill-opacity: 0.8;
+    stroke-width: 1px;
+}
+
+.zodiac_segment:hover	{
+    fill-opacity: 1;
+}
+
+.zodiac_symbol {
+    font-size: 30px;
+    font-family: "Zadiac";
+    fill: #ffffff;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+}
+
+.center-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.zodiac_center_pulse{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(55, 164, 221, 0.5803921568627451);
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(55, 164, 221, 0.51);
+        box-shadow: 0 0 0 0 rgba(55, 164, 221, 0.51);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 25px rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 25px rgba(204, 169, 44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}
